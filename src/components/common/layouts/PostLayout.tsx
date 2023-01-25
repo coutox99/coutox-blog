@@ -5,7 +5,9 @@ import { PostFrontMatter } from "../../../types/PostFrontMatter";
 import { formatDate } from "../../../utils/format";
 import Image from "../Image";
 import PageTitle from "../PageTitle";
+import ScrollTopAndComment from "../ScrollTopAndComment";
 import SectionContainer from "../SectionContainer";
+import { BlogSEO } from "../SEO";
 interface Props {
   frontMatter: PostFrontMatter;
   authorDetails: AuthorFrontMatter[];
@@ -30,6 +32,12 @@ export default function PostLayout({
 }: Props) {
   return (
     <SectionContainer>
+      <BlogSEO
+        url={`${siteMetadata.siteUrl}/blog/${frontMatter.slug}`}
+        authorDetails={authorDetails}
+        {...frontMatter}
+      />
+      <ScrollTopAndComment />
       <article>
         <div>
           <header className="pt-6 xl:pb-6">

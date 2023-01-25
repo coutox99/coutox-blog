@@ -7,9 +7,19 @@
       <language></language>
       <managingEditor>coutox99@gmail.com (Lucas Couto)</managingEditor>
       <webMaster>coutox99@gmail.com (Lucas Couto)</webMaster>
-      <lastBuildDate>Mon, 16 Jan 2023 00:00:00 GMT</lastBuildDate>
+      <lastBuildDate>Tue, 24 Jan 2023 00:00:00 GMT</lastBuildDate>
       <atom:link href="coutox.com/feed.xml" rel="self" type="application/rss+xml"/>
       
+  <item>
+    <guid>coutox.com/blog/model copy</guid>
+    <title>Desbloqueando%20os%20benef%EDcios%20da%20Arquitetura%20de%20Software%3A%20Como%20Maximizar%20sua%20Produtividade</title>
+    <link>coutox.com/blog/model copy</link>
+    <description>A%20arquitetura%20de%20software%20se%20tornou%20uma%20parte%20cr%EDtica%20do%20desenvolvimento%20de%20software%20moderno%2C%20pois%20fornece%20uma%20base%20para%20a%20constru%E7%E3o%20de%20aplica%E7%F5es%20de%20software%20eficientes%2C%20confi%E1veis%20e%20de%20f%E1cil%20manuten%E7%E3o.</description>
+    <pubDate>Tue, 24 Jan 2023 00:00:00 GMT</pubDate>
+    <author>coutox99@gmail.com (Lucas Couto)</author>
+    <category>arquitetura de software</category>
+  </item>
+
   <item>
     <guid>coutox.com/blog/padrao-de-balanceamento</guid>
     <title>Padr%E3o%20de%20Balanceamento%20de%20Carga%20%28Load%20Balancer%29</title>
