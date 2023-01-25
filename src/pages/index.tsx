@@ -1,7 +1,13 @@
 import React from "react";
+import { Hero, Layout } from "../components/common";
 
 export default function Home() {
-  return <div className="flex items-center justify-center h-screen">
-    <h2 className="font-bold text-2xl">coutox</h2>
-  </div>;
+
+  return (
+    <Layout>
+      <div>
+        <Hero />
+      </div>
+    </Layout>
+  );
 }
