@@ -2,41 +2,41 @@
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
       <title>coutox</title>
-      <link>/blog</link>
+      <link>coutox.com/blog</link>
       <description></description>
       <language></language>
-      <managingEditor> ()</managingEditor>
-      <webMaster> ()</webMaster>
+      <managingEditor>coutox99@gmail.com (Lucas Couto)</managingEditor>
+      <webMaster>coutox99@gmail.com (Lucas Couto)</webMaster>
       <lastBuildDate>Mon, 16 Jan 2023 00:00:00 GMT</lastBuildDate>
-      <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+      <atom:link href="coutox.com/feed.xml" rel="self" type="application/rss+xml"/>
       
   <item>
-    <guid>/blog/padrao-de-balanceamento</guid>
+    <guid>coutox.com/blog/padrao-de-balanceamento</guid>
     <title>Padr%E3o%20de%20Balanceamento%20de%20Carga%20%28Load%20Balancer%29</title>
-    <link>/blog/padrao-de-balanceamento</link>
+    <link>coutox.com/blog/padrao-de-balanceamento</link>
     <description>Um%20balanceador%20de%20carga%20%E9%20uma%20ferramenta%20fundamental%20para%20garantir%20a%20escalabilidade%20e%20a%20disponibilidade%20de%20um%20sistema%20de%20software%2C%20distribuindo%20a%20carga%20de%20trabalho%20entre%20v%E1rios%20servidores.</description>
     <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
-    <author> ()</author>
+    <author>coutox99@gmail.com (Lucas Couto)</author>
     <category>arquitetura de software</category><category>load balancer</category>
   </item>
 
   <item>
-    <guid>/blog/como-projetar-uma-aplicacao-web</guid>
+    <guid>coutox.com/blog/como-projetar-uma-aplicacao-web</guid>
     <title>Como%20projetar%20uma%20aplica%E7%E3o%20web%3A%20Arquitetura%20de%20Software</title>
-    <link>/blog/como-projetar-uma-aplicacao-web</link>
+    <link>coutox.com/blog/como-projetar-uma-aplicacao-web</link>
     <description>O%20desenvolvimento%20de%20uma%20aplica%E7%E3o%20pode%20ser%20simples%20ou%20complexa%2C%20dependendo%20de%20v%E1rios%20fatores.%20Podemos%20utilizar%20metodos%20que%20facilitam%20sua%20cria%E7%E3o.</description>
     <pubDate>Mon, 09 Jan 2023 00:00:00 GMT</pubDate>
-    <author> ()</author>
+    <author>coutox99@gmail.com (Lucas Couto)</author>
     <category>arquitetura de software</category><category>aplicação web</category>
   </item>
 
   <item>
-    <guid>/blog/arquitetura-de-software</guid>
+    <guid>coutox.com/blog/arquitetura-de-software</guid>
     <title>Desbloqueando%20os%20benef%EDcios%20da%20Arquitetura%20de%20Software%3A%20Como%20Maximizar%20sua%20Produtividade</title>
-    <link>/blog/arquitetura-de-software</link>
+    <link>coutox.com/blog/arquitetura-de-software</link>
     <description>A%20arquitetura%20de%20software%20se%20tornou%20uma%20parte%20cr%EDtica%20do%20desenvolvimento%20de%20software%20moderno%2C%20pois%20fornece%20uma%20base%20para%20a%20constru%E7%E3o%20de%20aplica%E7%F5es%20de%20software%20eficientes%2C%20confi%E1veis%20e%20de%20f%E1cil%20manuten%E7%E3o.</description>
     <pubDate>Mon, 02 Jan 2023 00:00:00 GMT</pubDate>
-    <author> ()</author>
+    <author>coutox99@gmail.com (Lucas Couto)</author>
     <category>arquitetura de software</category>
   </item>
 
