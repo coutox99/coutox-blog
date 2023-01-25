@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import cn from "classnames";
 import { useTheme } from "next-themes";
 import siteMetadata from "../../data/siteMetadata";
+import Footer from "./Footer";
 
 function NavItem({ href, text }) {
   const router = useRouter();
@@ -125,6 +126,7 @@ export default function Layout({ children, customMeta }: LayoutProps) {
       >
         {children}
       </main>
+      <Footer />
     </div>
   );
 }
