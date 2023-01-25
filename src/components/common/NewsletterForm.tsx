@@ -8,9 +8,11 @@ const NewsletterForm = ({
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const subscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
 
     const res = await fetch(`/api/${siteMetadata.newsletter.provider}`, {
       body: JSON.stringify({
@@ -24,6 +26,7 @@ const NewsletterForm = ({
 
     const { error: resError } = await res.json();
     if (resError) {
+      setLoading(false);
       setError(true);
       setMessage(
         "Your e-mail address is invalid or you are already subscribed!"
@@ -32,16 +35,19 @@ const NewsletterForm = ({
     }
 
     inputEl.current.value = "";
+    setLoading(false);
     setError(false);
     setSubscribed(true);
-    setMessage("Successfully! 🎉 You are now subscribed.");
+    setMessage("Quase pronto!! 🎉 Enviamos um email pra você.");
   };
 
   return (
     <div className="bg-indigo-500 rounded-md p-4">
-      <div className="pb-1 font-extrabold text-2xl md:text-4xl text-white">{title}</div>
+      <div className="pb-1 font-extrabold text-2xl md:text-4xl text-white">
+        {title}
+      </div>
       <p className="text-white py-4 text-lg">
-        Receba toda semana as atualizações novos artigos e muito mais.
+        Receba toda semana as atualizações, novos artigos e muito mais.
       </p>
       <form className="flex flex-col sm:flex-row" onSubmit={subscribe}>
         <div className="flex md:w-2/3">
@@ -70,9 +76,13 @@ const NewsletterForm = ({
                 : "hover:bg-primary-700 dark:hover:bg-primary-400"
             } focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 dark:ring-offset-black`}
             type="submit"
-            disabled={subscribed}
+            disabled={loading || subscribed}
           >
-            {subscribed ? "Obrigado!" : "Inscreva-se"}
+            {loading ? (
+              "Aguarde..."
+            ) : (
+              <span>{subscribed ? "Obrigado!" : "Inscreva-se"}</span>
+            )}
           </button>
         </div>
       </form>
