@@ -2,14 +2,14 @@ const siteMetadata = {
   title: "coutox",
   description: "",
   image: "",
-  siteUrl: "",
-  email: "",
-  author: "",
+  siteUrl: "coutox.com",
+  email: "coutox99@gmail.com",
+  author: "Lucas Couto",
   language: "",
   locale: "",
-  twitter: "",
+  twitter: "https://twitter.com/lucas3couto",
   socialBanner: "",
-  siteLogo: ""
+  siteLogo: '/static/images/logo.png'
 }
 
 export default siteMetadata
