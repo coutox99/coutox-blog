@@ -77,7 +77,7 @@ const NewsletterForm = ({
         </div>
       </form>
       {subscribed && (
-        <div className="mt-2 text-xs">
+        <div className="text-white mt-2 text-xs">
           Precisamos que você confirme a inscrição em seu email. Confira a caixa
           de span.
         </div>
