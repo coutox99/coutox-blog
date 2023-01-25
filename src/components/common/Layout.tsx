@@ -36,8 +36,6 @@ export default function Layout({ children, customMeta }: LayoutProps) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  console.log("#### resolvedTheme =>", resolvedTheme)
-
   useEffect(() => setMounted(true), []);
 
   const meta = {
