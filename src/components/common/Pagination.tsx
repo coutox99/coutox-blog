@@ -11,7 +11,7 @@ export default function Pagination({ totalPages, currentPage }: Props) {
 
   return (
     <div className='space-y-2 pt-6 pb-8 md:space-y-5'>
-      <nav className='flex justify-between'>
+      <nav className='flex space-x-2 justify-between'>
         {!prevPage && (
           <button
             className='cursor-auto disabled:opacity-50'
