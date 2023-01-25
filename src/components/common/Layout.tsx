@@ -81,7 +81,7 @@ export default function Layout({ children, customMeta }: LayoutProps) {
           </a>
           <div className="ml-[-0.60rem]">
             <NavItem href="/" text="Início" />
-            <NavItem href="/dashboard" text="Dashboard" />
+            {/* <NavItem href="/dashboard" text="Dashboard" /> */}
             <NavItem href="/blog" text="Blog" />
           </div>
           <button
