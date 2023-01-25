@@ -1,0 +1,69 @@
+---
+title: 'Padrão de Balanceamento de Carga (Load Balancer)'
+date: '2023-01-16'
+lastMod: '2023-01-16'
+tags: ['arquitetura de software', 'load balancer']
+draft: false
+summary: 'Um balanceador de carga é uma ferramenta fundamental para garantir a escalabilidade e a disponibilidade de um sistema de software, distribuindo a carga de trabalho entre vários servidores.'
+images:
+  ['/static/images/canada/mountains.jpg', '/static/images/canada/toronto.jpg']
+authors: ['default']
+---
+
+## O que é um Balanceador de Carga (Load Balancer)
+
+Um balanceador de carga é um dispositivo ou software que distribui a carga de trabalho entre vários servidores. Isso é feito para garantir que nenhum servidor fique sobrecarregado, o que poderia levar a problemas de desempenho e até mesmo a falhas do sistema. O balanceamento de carga é essencial em ambientes de alta disponibilidade e escalabilidade, onde é necessário garantir que o sistema possa lidar com picos de tráfego e carga de trabalho crescente.
+
+Existem vários tipos de algoritmos de balanceamento de carga, cada um com suas próprias vantagens e desvantagens. O algoritmo mais comum é o round-robin, que distribui a carga de trabalho de forma equitativa entre os servidores disponíveis. Outros algoritmos populares incluem o algoritmo de menor carga, que envia a carga para o servidor com a menor carga, e o algoritmo de menor tempo de resposta, que envia a carga para o servidor com o menor tempo de resposta.
+
+O uso de um balanceador de carga também pode ajudar a garantir a disponibilidade do sistema, pois ele pode detectar e redirecionar o tráfego para outro servidor caso um servidor falhe. Isso é conhecido como failover e é essencial para garantir a continuidade dos negócios e a disponibilidade do sistema.
+
+## \***\*Tipos de balanceadores de carga\*\***
+
+Existem três tipos principais de balanceadores de carga: estáticos, dinâmicos e de nível de aplicativo.
+
+1. **Balanceadores de carga estáticos**
+
+   Os balanceadores de carga estáticos são os mais simples e são geralmente configurados manualmente. Eles distribuem a carga de trabalho entre os servidores com base em uma lista pré-configurada de servidores. Estes balanceadores não possuem inteligência para detectar e reagir a problemas de desempenho ou falhas de servidor, por isso são menos flexíveis do que os balanceadores dinâmicos e de nível de aplicativo.
+
+   Existem vários tipos de algoritmos de balanceamento de carga, cada um com suas próprias vantagens e desvantagens. Alguns dos algoritmos mais comuns são:
+
+   - **Round Robin:** é o algoritmo de balanceamento de carga mais comum e distribui a carga de trabalho de forma equitativa entre os servidores disponíveis. Ele funciona rotacionando a lista de servidores a cada solicitação, enviando a próxima solicitação para o próximo servidor na lista. Este algoritmo é simples de implementar e é eficaz em ambientes com cargas de trabalho equilibradas.
+   - **Weighted Round Robin:** é semelhante ao algoritmo Round Robin, mas permite especificar pesos diferentes para cada servidor. Isso permite distribuir a carga de trabalho de forma desigual entre os servidores, levando em conta suas capacidades diferentes, por exemplo, se algum servidor tem mais recursos disponíveis ele pode ser configurado para receber mais carga de trabalho.
+   - **Sticky Session:** é um algoritmo que mantém a sessão do usuário com um servidor específico, mesmo quando outras solicitações são enviadas para outros servidores. Isso é útil para aplicações que mantêm o estado do usuário, como sistemas de carrinhos de compras eletrônicos, onde é importante manter o estado da sessão do usuário para garantir a consistência dos dados.
+   - **IP Hash:** é um algoritmo que distribui a carga de trabalho baseando-se no endereço IP do cliente. Ele funciona calculando um hash do endereço IP do cliente e enviando a solicitação para o servidor associado ao hash. Isso garante que solicitações de um mesmo cliente sejam sempre enviadas para o mesmo servidor, o que é útil para aplicações que precisam manter o estado da sessão do cliente.
+
+2. **Balanceadores de carga dinâmico**
+
+   Um balanceador de carga distribui a carga de trabalho entre vários servidores, usando algoritmos para detectar e reagir a problemas de desempenho e falhas de servidor. Ele pode ajustar dinamicamente a distribuição de carga para garantir que o sistema possa lidar com picos de tráfego e carga de trabalho crescente. Além disso, ele pode fornecer recursos adicionais como failover automático, otimização de desempenho e segurança. Ele é mais avançado e flexível do que os balanceadores estáticos, e é essencial para garantir a escalabilidade e a disponibilidade de um sistema de software.
+
+   Existem vários tipos de algoritmos de balanceamento de carga dinâmico, cada um com suas próprias vantagens e desvantagens. Alguns dos algoritmos mais comuns são:
+
+   - **Menos conexão:** este algoritmo distribui a carga de trabalho para o servidor com o menor número de conexões ativas. Isso garante que os servidores mais ocupados não fiquem sobrecarregados e que os servidores menos ocupados sejam utilizados de maneira mais eficiente. Este algoritmo é eficaz em ambientes com cargas de trabalho desequilibradas e é fácil de implementar.
+   - **A Conexão Mínima Ponderada:** este algoritmo é semelhante ao Menos conexão, mas permite especificar pesos diferentes para cada servidor. Isso permite distribuir a carga de trabalho de forma desigual entre os servidores, levando em conta suas capacidades diferentes.
+   - **Menor tempo de resposta:** este algoritmo distribui a carga de trabalho para o servidor com o menor tempo de resposta. Isso garante que as solicitações sejam processadas pelos servidores mais rápidos e ajuda a garantir que o sistema seja escalável e disponível. Este algoritmo é eficaz em ambientes com cargas de trabalho variáveis e é fácil de implementar.
+   - **Adaptativo ou baseado em recursos:** Este algoritmo se base na monitoração constante dos recursos dos servidores, como CPU, memória e largura de banda, e distribui a carga de trabalho para os servidores com recursos disponíveis. Isso garante que os servidores mais ocupados não fiquem sobrecarregados e que os servidores menos ocupados sejam utilizados de maneira mais eficiente. Este algoritmo é mais avançado e pode ser mais difícil de implementar, mas é muito útil em ambientes com cargas de trabalho variáveis.
+
+3. **Balanceadores de carga na núvem**
+
+   O balanceamento de carga na nuvem refere-se ao uso de balanceadores de carga em ambientes de nuvem. Isso permite distribuir a carga de trabalho entre várias instâncias virtuais ou servidores em nuvem, garantindo que o sistema possa lidar com picos de tráfego e carga de trabalho crescente. O balanceamento de carga na nuvem também pode ajudar a garantir a disponibilidade do sistema, pois ele pode detectar e redirecionar o tráfego para outra instância em caso de falha.
+
+   Os provedores de nuvem, como AWS, Azure e Google Cloud, oferecem seus próprios serviços de balanceamento de carga, que podem ser usados para distribuir a carga de trabalho entre instâncias virtuais ou servidores em suas respectivas nuvens. Esses serviços geralmente oferecem suporte a vários algoritmos de balanceamento de carga e podem ser configurados de acordo com as necessidades específicas do sistema. Além disso, esses serviços são escaláveis e podem ser ajustados dinamicamente para lidar com mudanças na carga de trabalho.
+
+   - O **Elastic Load Balancing (ELB)** da Amazon Web Services (AWS) é um serviço de balanceamento de carga que distribui automaticamente a carga de trabalho entre vários servidores ou máquinas virtuais em uma região. Ele oferece três tipos de balanceadores: Classic Load Balancer, Application Load Balancer e Network Load Balancer. O Classic Load Balancer é o mais antigo e é recomendado para aplicações simples e legadas. O Application Load Balancer é projetado para aplicações modernas e oferece recursos avançados, como roteamento baseado em conteúdo e gerenciamento de sessão. O Network Load Balancer é projetado para aplicações de alto desempenho e é otimizado para tráfego TCP/UDP.
+   - O Google Cloud Platform (GCP) \***\*oferece o **Cloud Load Balancing\*\*, que é um serviço de balanceamento de carga que distribui automaticamente a carga de trabalho entre várias instâncias do Compute Engine, Kubernetes Engine ou App Engine. Ele oferece três tipos de balanceadores: HTTP(S) Load Balancer, TCP/UDP Load Balancer e Internal Load Balancer. O HTTP(S) Load Balancer é projetado para aplicações web e oferece recursos avançados, como roteamento baseado em conteúdo e gerenciamento de sessão. O TCP/UDP Load Balancer é projetado para aplicações de alto desempenho e é otimizado para tráfego TCP/UDP. O Internal Load Balancer é projetado para aplicações em uma rede privada e oferece recursos de segurança adicionais.
+   - O Microsoft Azure oferece o **Azure Load Balancer**, que é um serviço de balanceamento de carga que distribui automaticamente a carga de trabalho entre várias instâncias de máquinas virtuais. Ele oferece dois tipos de balanceadores: Basic Load Balancer e Standard Load Balancer. O Basic Load Balancer é projetado para aplicações simples e é recomendado para ambientes de teste e desenvolvimento. O Standard Load Balancer é projetado para aplicações modernas e oferece recursos avançados, como roteamento baseado em conteúdo e gerenciamento de sessão.
+
+## Como escolher o melhor balanceador de carga para um projeto?
+
+A escolha do melhor balanceador de carga para um projeto depende de vários fatores, incluindo o tipo de aplicação, o volume de tráfego, as necessidades de escalabilidade e disponibilidade, e os recursos disponíveis. Algumas dicas para ajudar a escolher o melhor balanceador de carga incluem:
+
+1. Identifique as necessidades da sua aplicação: Determine as necessidades específicas da sua aplicação, como o tipo de tráfego (TCP, HTTP, etc.), o volume de tráfego esperado, as necessidades de escalabilidade e disponibilidade, e as necessidades de segurança.
+2. Escolha o tipo de balanceador de carga apropriado: Escolha o tipo de balanceador de carga que melhor atenda às necessidades da sua aplicação. Por exemplo, se você tem uma aplicação que precisa manter o estado da sessão do usuário, um balanceador de carga com suporte a sessão "sticky" pode ser apropriado.
+3. Escolha o algoritmo de balanceamento de carga apropriado: Escolha o algoritmo de balanceamento de carga que melhor atenda às necessidades da sua aplicação. Por exemplo, se você tem um aplicação que precisa distribuir a carga de forma equitativa entre os servidores, o algoritmo round-robin pode ser apropriado.
+4. Escolha a plataforma de nuvem apropriada: Escolha a plataforma de nuvem que melhor atenda às necessidades da sua aplicação. Cada provedor de nuvem tem suas próprias soluções de balanceamento de carga, como o ELB da AWS, o Cloud Load Balancing do GCP e o Azure Load Balancer do Microsoft Azure.
+5. Faça testes de carga e monitoramento: Faça testes de carga e monitoramento para avaliar o desempenho do balanceador de carga e identificar possíveis problemas. Isso ajudará a garantir que o balanceador de carga escolhido esteja funcionando corretamente e atendendo às necessidades da sua aplicação.
+
+## Conclusão
+
+Um balanceador de carga é um dispositivo ou software que distribui a carga de trabalho entre vários servidores, garantindo que nenhum fique sobrecarregado e ajudando a garantir a continuidade dos negócios em caso de falha de um servidor. Existem vários tipos de algoritmos de balanceamento de carga, cada um com suas próprias vantagens e desvantagens, como o round-robin, o algoritmo de menor carga, o algoritmo de menor tempo de resposta, entre outros. Além disso, as principais plataformas de nuvem oferecem seus próprios balanceadores de carga, como o Elastic Load Balancing (ELB) da AWS, o Cloud Load Balancing do GCP e o Azure Load Balancer do Microsoft Azure. É importante identificar as necessidades específicas do projeto e testar o desempenho do balanceador escolhido para garantir que ele esteja funcionando corretamente e atendendo às necessidades da aplicação.
