@@ -6,7 +6,10 @@ const siteMetadata = {
   email: "",
   author: "",
   language: "",
-  locale: ""
+  locale: "",
+  twitter: "",
+  socialBanner: "",
+  siteLogo: ""
 }
 
 export default siteMetadata
