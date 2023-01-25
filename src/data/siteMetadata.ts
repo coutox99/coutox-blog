@@ -1,7 +1,11 @@
 const siteMetadata = {
   title: "coutox",
   description: "",
-  image: ""
+  image: "",
+  siteUrl: "",
+  email: "",
+  author: "",
+  language: ""
 }
 
 export default siteMetadata
