@@ -9,7 +9,10 @@ const siteMetadata = {
   locale: "",
   twitter: "https://twitter.com/lucas3couto",
   socialBanner: "",
-  siteLogo: '/static/images/logo.png'
+  siteLogo: '/static/images/logo.png',
+  newsletter: {
+    provider: 'convertkit'
+  }
 }
 
 export default siteMetadata

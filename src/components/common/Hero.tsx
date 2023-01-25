@@ -21,10 +21,10 @@ export default function Hero() {
             alt="Lucas Couto"
             height={110}
             width={110}
-            src="/static/images/lucas.jpeg"
+            src="/static/images/lucas.png"
             sizes="30vw"
             priority
-            className="rounded-full filter grayscale"
+            className="rounded-full"
           />
         </div>
       </div>

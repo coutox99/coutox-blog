@@ -54,7 +54,7 @@ export default function PostLayout({
                 height={24}
                 width={24}
                 sizes="20vw"
-                src="/static/images/lucas.jpeg"
+                src="/static/images/lucas.png"
                 className="rounded-full"
               />
               <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
