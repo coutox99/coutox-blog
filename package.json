@@ -1,4 +1,7 @@
 {
   "name": "coutox",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.5.0"
+  }
 }
