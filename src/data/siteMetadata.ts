@@ -5,7 +5,8 @@ const siteMetadata = {
   siteUrl: "",
   email: "",
   author: "",
-  language: ""
+  language: "",
+  locale: ""
 }
 
 export default siteMetadata

@@ -13,6 +13,7 @@ import { GetStaticProps, InferGetStaticPropsType } from "next";
 import { PostFrontMatter } from "../../types/PostFrontMatter";
 import { MDXLayoutRenderer } from "../../components/common/MDXComponents";
 import PageTitle from "../../components/common/PageTitle";
+import { Layout } from "../../components/common";
 
 const DEFAULT_LAYOUT = "PostLayout";
 
@@ -76,7 +77,7 @@ export default function Blog({
   const { mdxSource, toc, frontMatter } = post;
 
   return (
-    <>
+    <Layout>
       {"draft" in frontMatter && frontMatter.draft !== true ? (
         <MDXLayoutRenderer
           layout={frontMatter.layout || DEFAULT_LAYOUT}
@@ -90,13 +91,13 @@ export default function Blog({
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
-            Under Construction{" "}
+            Em Construção{" "}
             <span role="img" aria-label="roadwork sign">
               🚧
             </span>
           </PageTitle>
         </div>
       )}
-    </>
+    </Layout>
   );
 }

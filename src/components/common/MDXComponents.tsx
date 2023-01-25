@@ -4,6 +4,7 @@ import { getMDXComponent } from "mdx-bundler/client";
 import CustomLink from './Link'
 import Pre from "./Pre";
 import TOCInline from './TOCInline'
+import Image from './Image'
 
 const Wrapper: React.ComponentType<{ layout: string }> = ({
   layout,
